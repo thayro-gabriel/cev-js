@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando no DOM</title>
+    <style>
+        body {
+            background-color: purple;
+            font: normal 18px 'Times New Roman';
+            color: whitesmoke;
+        }
+
+        .botao {
+            background-color: greenyellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando meus estudos com o <strong>DOM</strong></h1>
+    <p>Faz meses que eu estou tentando engatar nisso</p>
+    <p>1% todos os dias</p>
+    <div class="botao">Clica aqui pai</div>
+    <script>
+       /* let cabecalho = window.document.getElementsByTagName('h1')[0]
+       window.alert(cabecalho.innerText)
+       cabecalho.innerText = 'receba o melhor do mundo graças a deus' */
+
+       let cabecalho = window.document.querySelector('div.botao')
+       cabecalho.style.color = 'blue'
+    </script>
+</body>
+</html>

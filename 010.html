@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#damn {
+            background-color: grey;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: white;
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="damn">
+        Mouse fora do perímetro
+    </div>
+    <script>
+        var area = window.document.getElementById('damn')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', passar)
+        area.addEventListener('mouseout', fora)
+        area.addEventListener('mousedown', clicando)
+        function clicar() {
+            area.innerText = 'MOUSE NOS ATINGIU!'
+            area.style.background = 'red'
+        }
+        function passar() {
+            area.innerText = 'Mouse localizado!!!'
+            area.style.background = 'orange'
+        }
+        function fora() {
+            area.innerText = 'Mouse fora do perímetro'
+            area.style.background = 'grey'
+        }
+        function clicando() {
+            area.innerText = 'Mouse está nos atingindo!'
+            area.style.background = 'purple'
+        }
+    </script>
+</body>
+</html>
