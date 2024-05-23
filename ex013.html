@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+    <style>
+        body {
+            background-color: rgb(77, 75, 75);
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .titulo {
+            font-size: 30px;
+            color: yellow;
+            border: 10px;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: black;
+        }
+        .inserir-dado {
+            height: 100px;
+            background-color: yellow;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px;
+            font-size: 15px;
+            font-weight: 800;
+            border-radius: 100%;
+        }
+        #res {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: blue;
+            height: 200px;
+            width: 500px;
+            color:white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo"><h1>Sistema de multas poderoso</h1></div>
+    <div class="inserir-dado">Velocidade do carro: <input type="number" name="veltxt" id="veltxt">km/h
+    <input type="button" value="Medir" name="botao" id="botao" onclick="medir()"></div>
+    <div id="res" onclick="medir()">O resultado aparecerá aqui</div>
+    <script>
+        function medir() {
+            var vel = Number(window.document.querySelector('input#veltxt').value)
+            var result = window.document.querySelector('div#res')
+            result.innerHTML = `<p>Sua velocidade atual é de ${vel}km/h<p>`
+            if (vel > 80) {
+                result.innerHTML += `<p>PASSOU DO LIMITE DE VELOCIDADE (80KM/H), VAI SER MULTADO, MALDITO!!!!<p>`
+                result.style.background = 'red' 
+            } else {
+                result.innerHTML += `<p>Dirija sempre com segurança, usa o cinto pai.`
+                    result.style.background = 'green'  
+            }
+        }
+    </script>
+</body>
+</html>
