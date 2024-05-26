@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR AGE</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header><h1>HERE'S YOUR AGE (in case you don't know haha)</h1></header>
+    <section class="sect">
+        <p>BIRTH YEAR: <input type="number" name="birth_year" id="birth_year"></p>
+        <p>GENDER:
+            <input type="radio" name="radsex" id="man" checked> 
+            <label for="man">Man</label>
+            <input type="radio" name="radsex" id="woman">
+            <label for="woman">Woman</label>
+        </p>
+        <input type="button" name="button" id="button" value="Verify" onclick="verify()">
+
+        <img src="./img/default.jpg" alt="there's no image here" height="200px" width="200px">
+        <div><p id="age">Fill with your age and gender</p></div>
+    </section>
+    <footer>&copy; Thayro Gabriel</footer>
+    <script src="./script.js"></script>
+</body>
+</html>
