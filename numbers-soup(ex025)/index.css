@@ -1,0 +1,28 @@
+body {
+    background-color: orangered;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#tab {
+    width: 150px;
+}
+
+.number-field {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 50px;
+}

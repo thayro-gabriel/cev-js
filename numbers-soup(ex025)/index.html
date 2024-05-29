@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number's Soup</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header><h1>NUMBER SOUP</h1></header>
+    <section>
+        <div class="container">
+            <div class="numb"><p> Insert a number between 0 and 100, please:
+                <input type="number" id="numba">
+                <input type="button" id="click" value="Add number" onclick="validating(numb, nList)">
+            </p></div>
+            <div class='info'>
+                <div class="number-field">
+                    <select name="table" id="tab" size="10">
+                    </select>
+                    <input type="button" id="make_soup" value="Cook soup" onclick="makeSoup()">
+                </div>
+                <div class='results'>
+                    <p>All the results will appear here!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>&copy; Thayro Gabriel</footer>
+    <script src="./index.js"></script>
+</body>
+</html>
