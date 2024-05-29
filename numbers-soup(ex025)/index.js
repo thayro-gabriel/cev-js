@@ -46,10 +46,60 @@ function validating(n, param) {
     } else if (outofRange(n) == true) {
         window.alert('Please, type some number between 0 and 100!')
     } else if (isAlreadyAdded(n, param) == true) {
-        window.alert('That number is already added!')
+        window.alert('That number was already added!')
     } else {
         addNumber(n)
         return param.push(Number(n.value))
     }
 }
 
+function biggestNumber(param) {
+    let biggest = 0
+    for (let key in param) {
+        if (param[key] > biggest) {
+            biggest = param[key]
+        }
+    }
+    return biggest
+}
+
+function smallestNumber(param) {
+    let smallest = 101
+    for (let key in param) {
+        if (param[key] < smallest) {
+            smallest = param[key]
+        }
+    }
+    return smallest
+}
+
+function sum(param) {
+    let sum = 0
+    for (let key in param) {
+        sum += param[key]
+    }
+    return sum
+}
+
+function makeSoup(param) {
+    if (param.length == 0) {
+        window.alert("We can't make a soup without numbers. Please, add some.")
+    } else {
+        let result = window.document.getElementById('res')
+        result.innerHTML = `<p>All numbers we received = ${param} <br>
+        The biggest number = ${biggestNumber(param)} <br>
+        The smallest number = ${smallestNumber(param)} <br>
+        The sum of all numbers = ${sum(param)} <br>
+        The arithmetic average = ${average(param)}<p>`
+    }
+}
+
+function average(param) {
+    let sum = 0
+    for (let key in param) {
+        sum += param[key]
+    }
+    let avera = sum / param.length
+    console.log(`average ok ${sum}, ${param.length}, ${avera}`)
+    return avera
+}
